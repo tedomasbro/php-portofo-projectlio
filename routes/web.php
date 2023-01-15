@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\authController;
+use App\Http\Controllers\pageController;
 use Laravel\Socialite\Facades\Socialite;
+use PHPUnit\TextUI\XmlConfiguration\Group;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,9 +32,16 @@ Route::get('/auth/callback', [authController::class, "callback"])->middleware('g
 
 Route::get('/auth/logout', [authController::class, "logout"]);
 
-Route::get('/dashboard', function() {
-    return 'Welcome '. Auth::user()->email . ' to Homepage';
-})->middleware('auth');
+Route::prefix('dashboard')->middleware('auth')->group (
+    function () {
+        Route::get('/', function() {
+            return view('dashboard.layout');
+        });
+        Route::get('/', [pageController::class, 'index']);
+        Route::resource('pagesh', pageController::class);
+    }
+);
+
 
 
     // $user->token
