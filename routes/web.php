@@ -8,6 +8,7 @@ use Laravel\Socialite\Facades\Socialite;
 use PHPUnit\TextUI\XmlConfiguration\Group;
 use App\Http\Controllers\educationController;
 use App\Http\Controllers\experienceController;
+use App\Http\Controllers\skillController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,8 @@ Route::prefix('dashboard')->middleware('auth')->group (
         Route::resource('pagesh', pageController::class);
         Route::resource('experience', experienceController::class);
         Route::resource('education', educationController::class);
+        Route::get('skill', [skillController::class, "index"])->name('skill.index');
+        Route::post('skill', [skillController::class, "update"])->name('skill.update');
     }
 );
 
