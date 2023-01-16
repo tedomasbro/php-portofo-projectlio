@@ -6,6 +6,8 @@ use App\Http\Controllers\authController;
 use App\Http\Controllers\pageController;
 use Laravel\Socialite\Facades\Socialite;
 use PHPUnit\TextUI\XmlConfiguration\Group;
+use App\Http\Controllers\educationController;
+use App\Http\Controllers\experienceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +41,8 @@ Route::prefix('dashboard')->middleware('auth')->group (
         });
         Route::get('/', [pageController::class, 'index']);
         Route::resource('pagesh', pageController::class);
+        Route::resource('experience', experienceController::class);
+        Route::resource('education', educationController::class);
     }
 );
 
