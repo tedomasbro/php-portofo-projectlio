@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class metadata extends Model
 {
     use HasFactory;
-    protected $table = 'metadata';
+    protected $table = "metadata";
     protected $fillable = ['meta_key', 'meta_value'];
 }

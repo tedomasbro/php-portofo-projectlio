@@ -3371,5 +3371,45 @@
         },
         "color": "#294172",
         "aliases": []
+    },
+    {
+        "name": "Google Big Query",
+        "tags": ["bigdata", "mysql"],
+        "versions": {
+            "svg": ["original", "plain"],
+            "font": ["plain"]
+        },
+        "color": "#294172",
+        "aliases": []
+    },
+    {
+        "name": "Alation",
+        "tags": ["bigdata", "mysql"],
+        "versions": {
+            "svg": ["original", "plain"],
+            "font": ["plain"]
+        },
+        "color": "#294172",
+        "aliases": []
+    },
+    {
+        "name": "Superset",
+        "tags": ["bigdata", "mysql"],
+        "versions": {
+            "svg": ["original", "plain"],
+            "font": ["plain"]
+        },
+        "color": "#294172",
+        "aliases": []
+    },
+    {
+        "name": "Google Data Studio",
+        "tags": ["googletools", "dashboard"],
+        "versions": {
+            "svg": ["original", "plain"],
+            "font": ["plain"]
+        },
+        "color": "#294172",
+        "aliases": []
     }
 ]
